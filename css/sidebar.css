@@ -1,0 +1,182 @@
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(../font/Poppins-Medium.ttf);
+}
+
+*{
+  font-family: Poppins-Medium;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.navigation{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 75px;
+  border-radius: 10px;
+  box-sizing: initial;
+  border-left: 5px solid #7a84f5;
+  background-color: #7a84f5;
+  transition: width 0.5s;
+  overflow: hidden;
+}
+
+.navigation.active{
+  width: 210px;
+}
+
+.navigation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 23px;
+}
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  padding-top: 6px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.navigation ul li.active {
+background-color: #fff;
+}
+
+.navigation ul li b:nth-child(1){
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  width: 100%;
+  background-color: #fff;
+  display: none;
+}
+
+.navigation ul li b:nth-child(1)::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-bottom-right-radius: 10px;
+background-color: #7a84f5;
+}
+
+.navigation ul li b:nth-child(2){
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width: 100%;
+  background-color: #fff;
+  display: none;
+}
+
+.navigation ul li b:nth-child(2)::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-top-right-radius: 10px;
+background-color: #7a84f5;
+}
+
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2){
+  display: block;
+}
+
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation ul li.active a{
+  color: black;
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 50px;
+  line-height: 70px;
+ text-align: center;
+}
+
+.navigation ul li a .icon img{
+  font-size: 1.5em;
+}
+
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 57.5px;
+  white-space: normal;
+}
+
+.toggle{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color:  #fd82ab;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.toggle.active{
+  background-color: #7a84f5;
+}
+
+.toggle img{
+  position: absolute;
+  color: white;
+  font-size: 34px;
+  display: none;
+}
+
+.toggle img.open,
+.toggle.active img.close{
+  display: block;
+}
+
+.toggle img.close,
+.toggle.active img.open{
+  display: none;
+}
+
+
+p{
+  justify-content: center;
+  align-items: center;
+  padding-left: 300px;
+  padding-top: 60px;
+  font-size: xx-large;
+}
+

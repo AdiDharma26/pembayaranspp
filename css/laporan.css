@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+}
+
+.judul{
+  position: fixed;
+  width: 300px;
+  left: 280px;
+  padding-top: 50px;
+  width: 76%;
+  height: 125px;
+  background: #fff;
+  z-index: 98;
+}
+
+.judul hr{
+  position: relative;
+  top: 15px;
+  width: 1020px;
+  height: 7px;
+  background-color: #7a84f5;
+  border: none;
+  border-radius: 10px;
+}
+
+.container {
+  position: relative;
+  top: 150px;
+  left: 280px;
+  width: 1020px;
+  height: auto;
+}
+
+.container label {
+  font-size: large;
+  font-weight: bold;
+}
+
+.container select {
+  width: 175px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.container button {
+  width: 55px;
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #7a84f5;
+  cursor: pointer;
+  color: #fff;
+}
+
+.container button:hover {
+  transition: 0.3s;
+  background-color: #fd82ab;
+  color: #000;
+}
+
+.container .btn-print{
+  margin-top: 20px;
+  width: 1020px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #7a84f5;
+  cursor: pointer;
+  color: #fff;
+}
+
+.container .btn-print:hover {
+  transition: 0.3s;
+  background-color: #fd82ab;
+  color: #000;
+}
+
+.container table {
+  position: relative;
+  top: 10px;
+  width: 1020px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.container table thead {
+  background-color: #7a84f5;
+}
+
+.container table thead tr th {
+  text-align: center;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+}
+
+.container table tbody tr td {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #dadadb;
+}
+
+.container .cari_nis{
+  width: 1020px;
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  /* height: auto; */
+}
+
+.container .cari_kelas{
+  width: 1020px;
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  /* height: auto; */
+}
+
+.container .cari_angkatan{
+  width: 1020px;
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  /* height: auto; */
+}
+
+.container .cari_bulan{
+  width: 1020px;
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  /* height: auto; */
+}
+
+.container label{
+  margin-bottom: 7px;
+  display: block;
+  width: 300px;
+}
+
+.container .cari_nis input{
+  padding: 5px;
+  width: 958px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.container .cari_kelas input{
+  padding: 5px;
+  width: 958px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.container .cari_angkatan input{
+  padding: 5px;
+  width: 958px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.container .cari_bulan input{
+  padding: 5px;
+  width: 958px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.container .cari_nis button{
+  padding: 6px 12px 6px 12px;
+  color: white;
+  background-color: #7a84f5;
+  border-radius: 5px;
+  border : 0;
+  cursor: pointer;
+
+}
+
+.container .cari_nis button:hover{
+  background-color: #fd82ab;
+  color: black;
+  transition: 0.3s;
+}
+
+.container .ltotal{
+background-color:  rgb(190, 190, 190);
+border-radius: 5px 0px 0px 0px;
+text-align: right;
+}
+
+.container .nml-ltotal{
+  background-color: rgb(190, 190, 190);
+  border-radius: 0px 5px 0px 0px;
+  text-align: left;
+}
+
+.container .bltotal{
+background-color:  rgb(190, 190, 190);
+border-radius: 0px 0px 0px 5px;
+text-align: right;
+}
+
+.container .nml-bltotal{
+  background-color: rgb(190, 190, 190);
+  border-radius: 0px 0px 5px 0px;
+  text-align: left;
+}
+
+@media print{
+  .print{
+    display: none !important;
+  }
+  
+  .container{
+    margin-left: -295px;
+    margin-top: -110px;
+  }
+}

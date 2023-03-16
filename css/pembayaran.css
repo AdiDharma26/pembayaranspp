@@ -1,0 +1,178 @@
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(../font/Poppins-Medium.ttf);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Poppins-Medium;
+  text-decoration: none;
+}
+
+.judul{
+  position: fixed;
+  width: 300px;
+  left: 280px;
+  padding-top: 50px;
+  width: 76%;
+  height: 125px;
+  background: #fff;
+  z-index: 98;
+}
+
+.judul hr{
+  position: relative;
+  top: 15px;
+  width: 1020px;
+  height: 7px;
+  background-color: #7a84f5;
+  border: none;
+  border-radius: 10px;
+}
+
+.container{
+  position: relative;
+  top: 150px;
+  left: 280px;
+  width: 1020px;
+  /* height: auto;  */
+}
+
+.container .cari_nis{
+  width: 1030px;
+  font-weight: bold;
+  font-size: large;
+  /* height: auto; */
+}
+
+.container label{
+  margin-bottom: 7px;
+  display: block;
+  width: 300px;
+}
+
+.container .cari_nis input{
+  padding: 5px;
+  width: 960px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.container .cari_nis button{
+  padding: 6px 12px 6px 12px;
+  color: white;
+  background-color: #7a84f5;
+  border-radius: 5px;
+  border : 0;
+  cursor: pointer;
+
+}
+
+.container .cari_nis button:hover{
+  background-color: #fd82ab;
+  color: black;
+  transition: 0.3s;
+}
+
+/* Box Biodata */
+
+.container .box_biodata{
+  background-color:#dadadb;
+  border-radius: 5px;
+  padding: 26px 35px 56px 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.container .box_biodata .bd{
+  border-collapse: collapse;
+}
+
+.container .box_biodata .bd th,
+td{
+border-bottom: 1px solid #7a84f5;
+border-width: 2px;
+}
+
+.container .box_biodata .bd th{
+  width: 750px;
+  /* height: 90%; */
+  font-size: 18px;
+  padding :16px;
+}
+.container .box_biodata .bd td{
+  text-align: center;
+  width: 850px;
+  /* height: 90%; */
+  font-size: 18px;
+}
+.container .box_biodata .bd hr{
+  position: absolute;
+}
+
+/* tabel PEmbayaran */
+
+.container .tabel_pembayaran{
+  padding-bottom: 30px;
+}
+
+.container .tabel_pembayaran .pb{
+  /* background-color: #dadadb; */
+  width: 100%;
+  /* padding: 30px; */
+  text-align: center;
+  border-radius: 5px;
+  /* border-collapse: collapse; */
+}
+
+.container .tabel_pembayaran .pb th,
+td{
+padding: 10px;
+border-radius: 5px;
+}
+
+.container .tabel_pembayaran .pb th{
+ background-color: #7a84f5;
+}
+
+.container .tabel_pembayaran .pb td{
+  border-radius: 5px;
+  background-color: #dadadb;
+  border: 0;
+ }
+
+.container .tabel_pembayaran .pb td button{
+ background-color: #7a84f5;
+ color: white;
+ border-radius: 5px;
+ border: 0;
+ padding: 5px 7px 5px 7px;
+cursor: pointer;
+ width: 80px;
+}
+
+.container .tabel_pembayaran .pb td button:hover{
+  background-color: #fd82ab;
+  color: black;
+  transition: 0.3s;
+}
+
+.container .tabel_pembayaran .pb td .lunas{
+background-color: grey;
+cursor: not-allowed;
+}
+
+.container .tabel_pembayaran .pb td .lunas:hover{
+  color: white;
+  background-color: grey;
+}
+
+/* .navigation ul li a .title {
+    line-height: 25px !important;
+} */
+
+.icon {
+  top: 16px !important;
+}

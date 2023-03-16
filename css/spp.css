@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+}
+
+.judul{
+  position: fixed;
+  width: 300px;
+  left: 280px;
+  padding-top: 50px;
+  width: 76%;
+  height: 125px;
+  background: #fff;
+  z-index: 98;
+}
+
+.judul hr{
+  position: relative;
+  top: 15px;
+  width: 1020px;
+  height: 7px;
+  background-color: #7a84f5;
+  border: none;
+  border-radius: 10px;
+}
+
+.container{
+ position: relative;
+ top: 170px;
+ left: 550px;
+ width: 500px;
+ height: auto;
+
+}
+
+.container table{
+  width: 500px;
+  height: auto;
+  padding-bottom: 20px;
+}
+.container table thead{
+ background-color: #7a84f5;
+}
+
+.container table thead tr th{
+text-align: center;
+padding: 7px;
+border-radius: 5px;
+border: none;
+}
+
+.container table tbody tr td{
+  text-align: center;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #dadadb;
+}
+
+.container table tbody tr td button{
+  width: 96%;
+  }
+
+.container button{
+  float: right;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  background-color: #7a84f5;
+  border: 0;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.container button:hover{
+  background-color: #fd82ab;
+  color: black;
+  transition: 0.3s;
+}
