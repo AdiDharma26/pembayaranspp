@@ -16,7 +16,7 @@ include ('../koneksi.php');
     $hasil = mysqli_query($koneksi, $query);
 
     if(!$hasil) {
-        die("Gagal Memasukan Data Kelas " . mysqli_query($koneksi, $query));
+        die("Gagal Memasukan Data Pembayaran " . mysqli_query($koneksi, $query));
     }
 
     else{
