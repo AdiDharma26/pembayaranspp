@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 if ($_SESSION['tingkat'] == 'admin') {
 
 include('../koneksi.php');

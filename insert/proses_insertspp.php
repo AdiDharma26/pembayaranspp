@@ -1,5 +1,5 @@
 <?Php
-
+session_start();
 if ($_SESSION['tingkat'] == 'admin') {
 
 $angkatan = $_POST['angkatan'];

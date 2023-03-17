@@ -1,5 +1,5 @@
-<?Php
-
+<?php
+session_start();
 if ($_SESSION['tingkat'] == 'admin') {
 
 $username = $_POST['username'];

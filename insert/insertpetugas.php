@@ -1,6 +1,6 @@
 <?php
+session_start();
 if ($_SESSION['tingkat'] == 'admin') {
-  session_start();
 ?>
   <!DOCTYPE html>
   <html>

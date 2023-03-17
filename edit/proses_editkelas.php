@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if ($_SESSION['tingkat'] == 'admin') {
 
 $kelas = $_POST['kelas'];

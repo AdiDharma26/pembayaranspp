@@ -204,7 +204,7 @@ if ($_SESSION['tingkat'] == 'admin') {
                   <td><?php echo $row['bulan'] ?></td>
                   <td><?php echo $row['bataspembayaran'] ?></td>
                   <td><?php echo $row['tanggal'] ?></td>
-                  <td><?php echo $row['jumlah'] ?></td>
+                  <td>Rp. <?php echo number_format( $row['jumlah'],0,',','.') ?></td>
                   <td><?php echo $row['keterangan'] ?></td>
                 </tr>
               <?php
@@ -308,7 +308,7 @@ if ($_SESSION['tingkat'] == 'admin') {
                   <td><?php echo $row['bulan'] ?></td>
                   <td><?php echo $row['bataspembayaran'] ?></td>
                   <td><?php echo $row['tanggal'] ?></td>
-                  <td><?php echo $row['jumlah'] ?></td>
+                  <td>Rp. <?php echo number_format( $row['jumlah'],0,',','.') ?></td>
                   <td><?php echo $row['keterangan'] ?></td>
                 </tr>
               <?php
@@ -355,16 +355,18 @@ if ($_SESSION['tingkat'] == 'admin') {
               <label for="">MASUKAN BULAN</label>
               <input type="text" autocomplete="off" name="bulan" list="bulan">
               <datalist id="bulan">
-                <?php
-
-                $query = "SELECT * FROM tb_pembayaran";
-                $result = mysqli_query($koneksi, $query);
-                while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-                  <option value="<?php echo $row['bulan']; ?>"></option>
-                <?php
-                }
-                ?>
+                  <option value="<?php echo 'Januari' ?>"></option>
+                  <option value="<?php echo 'Februari' ?>"></option>
+                  <option value="<?php echo 'Maret' ?>"></option>
+                  <option value="<?php echo 'April' ?>"></option>
+                  <option value="<?php echo 'Mei' ?>"></option>
+                  <option value="<?php echo 'Juni' ?>"></option>
+                  <option value="<?php echo 'Juli' ?>"></option>
+                  <option value="<?php echo 'Agustus' ?>"></option>
+                  <option value="<?php echo 'September' ?>"></option>
+                  <option value="<?php echo 'Oktober' ?>"></option>
+                  <option value="<?php echo 'November' ?>"></option>
+                  <option value="<?php echo 'Desember' ?>"></option>
               </datalist>
               <button type="submit">Cari</button>
             </form>
@@ -397,7 +399,7 @@ if ($_SESSION['tingkat'] == 'admin') {
                 <?php
                 include('../koneksi.php');
                 $number = 1;
-                $query = "SELECT * FROM tb_pembayaran WHERE bulan ='$bulan'";
+                $query = "SELECT * FROM tb_pembayaran WHERE bulan LIKE '%$bulan%'";
                 $hasil = mysqli_query($koneksi, $query);
 
                 while ($row = mysqli_fetch_assoc($hasil)) {
@@ -409,12 +411,12 @@ if ($_SESSION['tingkat'] == 'admin') {
                     <td><?php echo $row['nis'] ?></td>
                     <td><?php echo $row['bataspembayaran'] ?></td>
                     <td><?php echo $row['tanggal'] ?></td>
-                    <td><?php echo $row['jumlah'] ?></td>
+                    <td>Rp. <?php echo number_format( $row['jumlah'],0,',','.') ?></td>
                     <td><?php echo $row['keterangan'] ?></td>
                   </tr>
                 <?php
                 };
-                $queryS = mysqli_query($koneksi, "SELECT SUM(jumlah) as jumlah FROM tb_pembayaran where keterangan = 'Lunas' AND bulan = '$bulan'");
+                $queryS = mysqli_query($koneksi, "SELECT SUM(jumlah) as jumlah FROM tb_pembayaran where keterangan = 'Lunas' AND bulan LIKE  '%$bulan%'");
                 $total = mysqli_fetch_assoc($queryS);
                 $total = $total['jumlah'];
                 $ltotal = "Rp. " . number_format($total, 0, ',', '.');
@@ -428,7 +430,7 @@ if ($_SESSION['tingkat'] == 'admin') {
               </tr>
 
               <?php
-              $queryS = mysqli_query($koneksi, "SELECT SUM(jumlah) as jumlah FROM tb_pembayaran where keterangan = 'Belum Lunas' AND bulan = '$bulan'");
+              $queryS = mysqli_query($koneksi, "SELECT SUM(jumlah) as jumlah FROM tb_pembayaran where keterangan = 'Belum Lunas' AND bulan LIKE '%$bulan%'");
               $total = mysqli_fetch_assoc($queryS);
               $total = $total['jumlah'];
               $bltotal = "Rp. - " . number_format($total, 0, ',', '.');

@@ -218,9 +218,19 @@ text-align: right;
   .print{
     display: none !important;
   }
+
+  table {
+    border: solid #000 !important;
+    border-width: 1px 0 0 1px !important;
+}
+th, td {
+    border: solid #000 !important;
+    border-width: 0 1px 1px 0 !important;
+}
   
   .container{
-    margin-left: -295px;
-    margin-top: -110px;
+    margin-left: -285px;
+    margin-top: -70px;
+    font-size: medium;
   }
 }

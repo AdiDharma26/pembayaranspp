@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if ($_SESSION['tingkat'] == 'admin') {
 
   include('../koneksi.php');
@@ -35,7 +35,7 @@ if ($_SESSION['tingkat'] == 'admin') {
             </tr>
             <tr>
               <td><label for="keterangan">Keterangan :</label></td>
-              <td><input type="text" id="keterangan" name="keterangan" value="<?php echo $data['keterangan']; ?>"></td>
+              <td><input type="text" id="keterangan" name="keterangan" value="<?php echo $data['status']; ?>"></td>
             </tr>
             <tr>
               <td colspan="2">

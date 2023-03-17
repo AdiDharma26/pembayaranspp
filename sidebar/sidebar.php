@@ -187,7 +187,7 @@ include '../koneksi.php';
                         </a>
                         </li>
 
-                        <li class="list">
+                        <li class="list" style="margin-top: 330px;">
                           <b></b>
                           <b></b>
                           <a href="../logout/logout.php">
@@ -218,7 +218,7 @@ include '../koneksi.php';
                         </a>
                         </li>
 
-                        <li class="list">
+                        <li class="list" style="margin-top: 395px;">
                           <b></b>
                           <b></b>
                           <a href="../logout/logout.php">

@@ -25,7 +25,7 @@ $_SESSION['view'] = 'dashboard';
     $total_kelas = mysqli_query($koneksi, "SELECT COUNT(*) AS 'jumlah_kelas' FROM tb_kelas");
     $total_kelas = mysqli_fetch_array($total_kelas);
 
-    $total_pembayaran = mysqli_query($koneksi, "SELECT SUM(jumlah) as jumlah_pembayaran FROM tb_pembayaran where keterangan = 'Lunas' ");
+    $total_pembayaran = mysqli_query($koneksi, "SELECT SUM(jumlah) as 'jumlah_pembayaran' FROM tb_pembayaran where keterangan = 'Lunas' ");
     $total_pembayaran = mysqli_fetch_array($total_pembayaran);
   ?>
     <div class="judul">
